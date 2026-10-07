@@ -36,7 +36,7 @@
 'use strict';
 // DATA PLACEHOLDER: publish your verified animals.csv alongside index.html.
 const CSV_URL = './animals.csv';
-const columns=['name','type','city','county','address','phone','website'];
+const columns=['name','species','city','shelter','address','final_date','email','phone','latitude','longitude','image_url','animal_id','details','listing_url','verified_at'];
 const placeholder = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="#e3e6d7"/><circle cx="300" cy="170" r="72" fill="#c3cbb6"/><ellipse cx="260" cy="145" rx="20" ry="30" fill="#88967b"/><ellipse cx="340" cy="145" rx="20" ry="30" fill="#88967b"/><ellipse cx="300" cy="205" rx="42" ry="32" fill="#88967b"/><text x="300" y="320" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#43563b">Shelter photo placeholder</text></svg>');
 const samples=[{name:'Maple',species:'Dog',city:'Los Angeles',latitude:34.0522,longitude:-118.2437},{name:'Clover',species:'Cat',city:'Sacramento',latitude:38.5816,longitude:-121.4944},{name:'Sunny',species:'Dog',city:'San Diego',latitude:32.7157,longitude:-117.1611}].map((a,i)=>({...a,shelter:'Example shelter — '+a.city,address:'Demo address · '+a.city+', CA',final_date:'',email:'',phone:'',animal_id:'DEMO-0'+(i+1),details:'Fictional listing for demonstration only.'}));
 let animals=samples, demo=true, position=null;
